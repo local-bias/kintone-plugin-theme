@@ -18,6 +18,8 @@ const THEMES = [
   ['BLACK', 'gaia-argoui-app-theme-black', 'ブラック'],
 ];
 
+const TARGET_SELECTOR = '.container-gaia';
+
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const useStyles = makeStyles((theme) => ({
@@ -29,11 +31,8 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     position: 'relative',
   },
-  buttonSuccess: {
-    backgroundColor: green[500],
-    '&:hover': {
-      backgroundColor: green[700],
-    },
+  formControl: {
+    marginTop: -theme.spacing(1)
   },
   select: {
     minWidth: 150,
@@ -89,12 +88,10 @@ export default function HeaderComponent(props) {
     });
 
     const dstClass = getThemeClassName(event.target.value);
-    const targets = Array.from(document.querySelectorAll(`.${originClass}`));
+    const target = document.querySelector(TARGET_SELECTOR);
 
-    for (const target of targets) {
-      target.classList.remove(originClass);
-      target.classList.add(dstClass);
-    }
+    target.classList.remove(originClass);
+    target.classList.add(dstClass);
 
     // 変更をアプリ設定に適用
     await kintone.api(kintone.api.url('/k/v1/preview/app/deploy', true), 'POST', {
