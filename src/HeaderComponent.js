@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: -theme.spacing(1)
   },
   select: {
-    minWidth: 150,
+    minWidth: 120,
   },
   buttonProgress: {
     color: green[500],

@@ -13,7 +13,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import blueGrey from '@material-ui/core/colors/blueGrey';
 
-
 const URL_HOMEPAGE = 'https://localbias.work';
 const URL_TWITTER = 'https://twitter.com/LbRibbit';
 const URL_GITHUB = 'https://github.com/Local-Bias?tab=repositories';

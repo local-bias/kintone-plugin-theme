@@ -7,8 +7,6 @@ const WRAPPER_ID = 'local-bias_theme_config-wrapper';
 
 (PLUGIN_ID => {
 
-  console.log('loaded');
-
   ReactDOM.render(
     <SocialIcons />,
     document.getElementById(WRAPPER_ID),
