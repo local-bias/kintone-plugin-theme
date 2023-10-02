@@ -596,13 +596,13 @@
     js-base64 "^3.7.2"
     qs "^6.10.5"
 
-"@kintone/webpack-plugin-kintone-plugin@7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@kintone/webpack-plugin-kintone-plugin/-/webpack-plugin-kintone-plugin-7.0.4.tgz#5adacf0dd240fe816256a5b77484ec31fcc7116c"
-  integrity sha512-/9DPJAR2BgNWpln03OJqOPepv6Q6UknT07PF488RRD5YkxwUu3PFgx8f/okWXoAHoyGKpWCkaMhJFHkDP2caXQ==
+"@kintone/webpack-plugin-kintone-plugin@7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@kintone/webpack-plugin-kintone-plugin/-/webpack-plugin-kintone-plugin-7.0.5.tgz#476a66bf863eb4a2e3f8c8a016860973edadc583"
+  integrity sha512-pgLWIjoUndTvr6JiBEvux/RTh06J/aC4mqi+oZs8KbGI+Hun4nJUTZnY/GnSY8AD1MGYGDsCbLc6AxrrPB8ffw==
   dependencies:
     "@kintone/plugin-packer" "^7.0.4"
-    mkdirp "^2.1.6"
+    mkdirp "^3.0.1"
 
 "@lb-ribbit/kintone-secrets@0.3.0":
   version "0.3.0"
@@ -3963,6 +3963,11 @@ mkdirp@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-2.1.6.tgz#964fbcb12b2d8c5d6fbc62a963ac95a273e2cc19"
   integrity sha512-+hEnITedc8LAtIP9u3HJDFIdcLV2vXP33sqLLIzkv1Db1zO/1OxbvYf0Y1OC/S/Qo5dxHXepofhmxL02PsKe+A==
+
+mkdirp@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-3.0.1.tgz#e44e4c5607fb279c168241713cc6e0fea9adcb50"
+  integrity sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==
 
 ms@2.0.0:
   version "2.0.0"
