@@ -24,7 +24,7 @@
     "@kintone/dts-gen": "8.0.0",
     "@kintone/plugin-packer": "8.0.0",
     "@kintone/plugin-uploader": "9.0.0",
-    "@kintone/rest-api-client": "4.1.1",
+    "@kintone/rest-api-client": "5.0.0",
     "@kintone/webpack-plugin-kintone-plugin": "7.0.5",
     "@lb-ribbit/kintone-secrets": "0.3.0",
     "@lb-ribbit/kintone-xapp": "0.4.0",
