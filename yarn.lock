@@ -617,10 +617,10 @@
     js-base64 "^3.7.2"
     qs "^6.10.5"
 
-"@kintone/webpack-plugin-kintone-plugin@7.0.5":
-  version "7.0.5"
-  resolved "https://registry.yarnpkg.com/@kintone/webpack-plugin-kintone-plugin/-/webpack-plugin-kintone-plugin-7.0.5.tgz#476a66bf863eb4a2e3f8c8a016860973edadc583"
-  integrity sha512-pgLWIjoUndTvr6JiBEvux/RTh06J/aC4mqi+oZs8KbGI+Hun4nJUTZnY/GnSY8AD1MGYGDsCbLc6AxrrPB8ffw==
+"@kintone/webpack-plugin-kintone-plugin@8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@kintone/webpack-plugin-kintone-plugin/-/webpack-plugin-kintone-plugin-8.0.0.tgz#9d063c0f881449a7c102543ceb6a8bfe79ed3126"
+  integrity sha512-lreokeCvwa5+61b16Vvg60B2rEHjFvhxh7TFcRNEGr1Er/SuN9Ob5yLjBVSw9fZiIVUi4LgDlbOe7rLL+ZsC0w==
   dependencies:
     "@kintone/plugin-packer" "^7.0.4"
     mkdirp "^3.0.1"
