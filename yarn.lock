@@ -602,13 +602,13 @@
     os-locale "^5.0.0"
     puppeteer "^21.4.1"
 
-"@kintone/rest-api-client@5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@kintone/rest-api-client/-/rest-api-client-5.0.1.tgz#c53abfcce0307e38ceb1bb72a0cf4a1edc1b1247"
-  integrity sha512-/GFCclbFfK2t8A1vSQdKP12Q9uoI3MyPaN530YTvwdcFAtfUZ1brH9aMNC78gWR+73/mJBAO5r5T7BA41ukngw==
+"@kintone/rest-api-client@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@kintone/rest-api-client/-/rest-api-client-5.0.2.tgz#88f110a056a02441b3df592f6db4f4e3b3ff0cc8"
+  integrity sha512-VH7IazegfaO7sNhWLQovfE/jVmqTm8QmBwFbxNmMZdAUe1hn90tliUl5ufvGXIzyf0GO/SX1OK2pyLiEX5tc8A==
   dependencies:
-    axios "^1.4.0"
-    core-js "^3.32.2"
+    axios "^1.5.1"
+    core-js "^3.33.1"
     form-data "^4.0.0"
     js-base64 "^3.7.5"
     mime "^3.0.0"
@@ -1642,15 +1642,6 @@ axios@^0.27.2:
     follow-redirects "^1.14.9"
     form-data "^4.0.0"
 
-axios@^1.4.0:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.5.1.tgz#11fbaa11fc35f431193a9564109c88c1f27b585f"
-  integrity sha512-Q28iYCWzNHjAm+yEAot5QaAMxhMghWLFVf7rRdwhUI+c2jix2DUXjAHXVi+s1ibs3mjPO/cCgbA++3BjD0vP/A==
-  dependencies:
-    follow-redirects "^1.15.0"
-    form-data "^4.0.0"
-    proxy-from-env "^1.1.0"
-
 axios@^1.5.1:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.0.tgz#f1e5292f26b2fd5c2e66876adc5b06cdbd7d2102"
@@ -1976,10 +1967,10 @@ core-js@^3.25.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.25.5.tgz#e86f651a2ca8a0237a5f064c2fe56cef89646e27"
   integrity sha512-nbm6eZSjm+ZuBQxCUPQKQCoUEfFOXjUZ8dTTyikyKaWrTYmAVbykQfwsKE5dBK88u3QCkCrzsx/PPlKfhsvgpw==
 
-core-js@^3.32.2:
-  version "3.33.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.33.0.tgz#70366dbf737134761edb017990cf5ce6c6369c40"
-  integrity sha512-HoZr92+ZjFEKar5HS6MC776gYslNOKHt75mEBKWKnPeFDpZ6nH5OeF3S6HFT1mUAUZKrzkez05VboaX8myjSuw==
+core-js@^3.33.1:
+  version "3.33.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.33.1.tgz#ef3766cfa382482d0a2c2bc5cb52c6d88805da52"
+  integrity sha512-qVSq3s+d4+GsqN0teRCJtM6tdEEXyWxjzbhVrCHmBS5ZTM0FS2MOS0D13dUXAWDUN6a+lHI/N1hF9Ytz6iLl9Q==
 
 cosmiconfig@8.3.6:
   version "8.3.6"
