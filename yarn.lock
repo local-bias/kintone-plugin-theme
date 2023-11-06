@@ -578,13 +578,13 @@
     os-locale "^5.0.0"
     puppeteer "^21.4.1"
 
-"@kintone/rest-api-client@5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@kintone/rest-api-client/-/rest-api-client-5.0.2.tgz#88f110a056a02441b3df592f6db4f4e3b3ff0cc8"
-  integrity sha512-VH7IazegfaO7sNhWLQovfE/jVmqTm8QmBwFbxNmMZdAUe1hn90tliUl5ufvGXIzyf0GO/SX1OK2pyLiEX5tc8A==
+"@kintone/rest-api-client@5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@kintone/rest-api-client/-/rest-api-client-5.0.3.tgz#dfbe7452216de274e1041eeec14f2f77074ec325"
+  integrity sha512-FBoTwPAQ25OKru6csnTjDfUFy5lIv43WxfJEfTJ9V87qoJPtu7ICYfhcZIlpewl5QxtCsc9xGjhKJEU+Xjjdaw==
   dependencies:
-    axios "^1.5.1"
-    core-js "^3.33.1"
+    axios "^1.6.0"
+    core-js "^3.33.2"
     form-data "^4.0.0"
     js-base64 "^3.7.5"
     mime "^3.0.0"
@@ -1618,7 +1618,7 @@ axios@^0.27.2:
     follow-redirects "^1.14.9"
     form-data "^4.0.0"
 
-axios@^1.5.1, axios@^1.6.0:
+axios@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.0.tgz#f1e5292f26b2fd5c2e66876adc5b06cdbd7d2102"
   integrity sha512-EZ1DYihju9pwVB+jg67ogm+Tmqc6JmhamRN6I4Zt8DfZu5lbcQGw3ozH9lFejSJgs/ibaef3A9PMXPLeefFGJg==
@@ -1943,10 +1943,10 @@ core-js@^3.25.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.25.5.tgz#e86f651a2ca8a0237a5f064c2fe56cef89646e27"
   integrity sha512-nbm6eZSjm+ZuBQxCUPQKQCoUEfFOXjUZ8dTTyikyKaWrTYmAVbykQfwsKE5dBK88u3QCkCrzsx/PPlKfhsvgpw==
 
-core-js@^3.33.1:
-  version "3.33.1"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.33.1.tgz#ef3766cfa382482d0a2c2bc5cb52c6d88805da52"
-  integrity sha512-qVSq3s+d4+GsqN0teRCJtM6tdEEXyWxjzbhVrCHmBS5ZTM0FS2MOS0D13dUXAWDUN6a+lHI/N1hF9Ytz6iLl9Q==
+core-js@^3.33.2:
+  version "3.33.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.33.2.tgz#312bbf6996a3a517c04c99b9909cdd27138d1ceb"
+  integrity sha512-XeBzWI6QL3nJQiHmdzbAOiMYqjrb7hwU7A39Qhvd/POSa/t9E1AeZyEZx3fNvp/vtM8zXwhoL0FsiS0hD0pruQ==
 
 cosmiconfig@8.3.6, cosmiconfig@^8.2.0:
   version "8.3.6"
