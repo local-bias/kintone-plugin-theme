@@ -551,7 +551,7 @@
     ajv "^8.12.0"
     bytes "^3.1.2"
 
-"@kintone/plugin-packer@8.0.1", "@kintone/plugin-packer@^8.0.0":
+"@kintone/plugin-packer@8.0.1", "@kintone/plugin-packer@^8.0.1":
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/@kintone/plugin-packer/-/plugin-packer-8.0.1.tgz#1d9c1bb82563757d72f36acef77dc00993817e50"
   integrity sha512-rW6TBiqzJ6/r+8iFB2gJnBuVSyXLlK1yvh6vWbfNdvsvQxvLZY2dwIFNHag4naomxocKy/RXeKIR9ooVblgG1A==
@@ -601,12 +601,12 @@
     js-base64 "^3.7.2"
     qs "^6.10.5"
 
-"@kintone/webpack-plugin-kintone-plugin@8.0.1":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@kintone/webpack-plugin-kintone-plugin/-/webpack-plugin-kintone-plugin-8.0.1.tgz#7d6d84d98054029f955ab0be7b772dc624d968dc"
-  integrity sha512-+K+46C8nVc6QStjPDF2rzkeNzX51oqMKZlWJ3+AC3uThYc1mhYBxluHa57kdF/84OmYgOInXigcpkXLuBKpSng==
+"@kintone/webpack-plugin-kintone-plugin@8.0.2":
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/@kintone/webpack-plugin-kintone-plugin/-/webpack-plugin-kintone-plugin-8.0.2.tgz#b8891f8405af1406d36f9db791f821bcae910e25"
+  integrity sha512-KFCBcCj1Y4rhwplBaoHj2OZVkp5V2uQf5PohUG0jPMhWYasZTYmsm85e+Vz4z5v5rWjxSIM67l2h0jgPmj+lUA==
   dependencies:
-    "@kintone/plugin-packer" "^8.0.0"
+    "@kintone/plugin-packer" "^8.0.1"
     mkdirp "^3.0.1"
 
 "@lb-ribbit/kintone-secrets@0.3.0":
