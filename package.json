@@ -25,6 +25,7 @@
     "@emotion/styled": "11.11.0",
     "@kintone/rest-api-client": "5.0.5",
     "@konomi-app/kintone-utilities": "^4.1.6",
+    "@konomi-app/kintone-utilities-react": "^1.10.4",
     "@lb-ribbit/kintone-secrets": "0.3.0",
     "@lb-ribbit/kintone-xapp": "0.4.0",
     "@mui/icons-material": "5.15.1",
