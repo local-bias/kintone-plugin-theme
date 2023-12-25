@@ -1,6 +1,6 @@
 import React, { ChangeEventHandler, FCX } from 'react';
 import { CircularProgress, MenuItem, TextField } from '@mui/material';
-import { kintoneClient } from '@common/kintone-api';
+import { kintoneClient } from '@/common/kintone-api';
 import { getApp } from '@lb-ribbit/kintone-xapp';
 import styled from '@emotion/styled';
 

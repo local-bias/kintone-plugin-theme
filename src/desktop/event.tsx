@@ -1,15 +1,14 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { kintoneClient } from '@common/kintone-api';
+import { kintoneClient } from '@/common/kintone-api';
 import { getAppId, getHeaderSpace } from '@lb-ribbit/kintone-xapp';
 
 import App from './app';
+import { manager } from '@/common/listener';
 
 const ROOT_ID = 'ribbit-kintone-plugin-theme-root';
 
-const events: launcher.Events = ['app.record.index.show'];
-
-const action: launcher.Action = async (event, pluginId) => {
+manager.add(['app.record.index.show'], async (event) => {
   if (document.getElementById(ROOT_ID)) {
     return event;
   }
@@ -29,11 +28,7 @@ const action: launcher.Action = async (event, pluginId) => {
 
   const response = await kintoneClient.app.getAppSettings({ app: getAppId()! });
 
-  console.log(response);
-
   root.render(<App initSettings={response} />);
 
   return event;
-};
-
-export default { events, action };
+});
