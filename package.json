@@ -30,7 +30,7 @@
     "@lb-ribbit/kintone-xapp": "0.4.0",
     "@mui/icons-material": "5.15.9",
     "@mui/material": "5.15.9",
-    "@sentry/react": "7.99.0",
+    "@sentry/react": "7.100.1",
     "@types/luxon": "3.4.2",
     "@types/react": "18.2.55",
     "@types/react-dom": "18.2.19",
