@@ -1,13 +1,17 @@
-const hp = 'https://konomi.app/';
-const commonCdn = 'https://kintone-plugin.konomi.app/common';
+//@ts-check
+const hp = 'https://konomi.app';
+const cdn = 'https://kintone-plugin.konomi.app';
+const key = 'theme';
 const localhost = 'https://127.0.0.1:8241';
 
 /** @type { import('@konomi-app/kintone-utilities').PluginConfig } */
 export default {
+  id: `ribbit-kintone-plugin-${key}`,
+  pluginReleasePageUrl: `https://ribbit.konomi.app/kintone-plugin/`,
   manifest: {
     base: {
       manifest_version: 1,
-      version: '1.1.0',
+      version: '2.0.0',
       type: 'APP',
       name: {
         en: 'Real-time Theme Change Plugin',
@@ -21,33 +25,33 @@ export default {
       },
       icon: 'icon.png',
       homepage_url: { ja: hp, en: hp },
-      desktop: { js: [`${commonCdn}/desktop.js`], css: [] },
-      mobile: { js: [`${commonCdn}/desktop.js`], css: [] },
+      desktop: { js: [`${cdn}/common/desktop.js`], css: [] },
+      mobile: { js: [`${cdn}/common/desktop.js`], css: [] },
       config: {
         html: 'config.html',
-        js: [`${commonCdn}/config.js`],
+        js: [`${cdn}/common/config.js`],
         css: [],
         required_params: [],
       },
     },
     dev: {
       desktop: {
-        js: [`${localhost}/dist/dev/desktop/index.js`],
+        js: [`${localhost}/dist/dev/desktop.js`],
         css: [`${localhost}/dist/dev/desktop.css`],
       },
       mobile: {
-        js: [`${localhost}/dist/dev/desktop/index.js`],
+        js: [`${localhost}/dist/dev/desktop.js`],
         css: [`${localhost}/dist/dev/desktop.css`],
       },
       config: {
-        js: [`${localhost}/dist/dev/config/index.js`],
+        js: [`${localhost}/dist/dev/config.js`],
         css: [`${localhost}/dist/dev/config.css`],
       },
     },
     prod: {
-      desktop: { js: ['desktop.js'], css: ['desktop.css'] },
-      mobile: { js: ['desktop.js'], css: ['desktop.css'] },
-      config: { js: ['config.js'], css: ['config.css'] },
+      desktop: { js: [`${cdn}/${key}/desktop.js`], css: [`${cdn}/${key}/desktop.css`] },
+      mobile: { js: [`${cdn}/${key}/desktop.js`], css: [`${cdn}/${key}/desktop.css`] },
+      config: { js: [`${cdn}/${key}/config.js`], css: [`${cdn}/${key}/config.css`] },
     },
     standalone: {
       desktop: { js: ['desktop.js'], css: ['desktop.css'] },

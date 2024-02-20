@@ -12,7 +12,5 @@ export const manager = new KintoneEventManager({
   logDisabled: process.env.NODE_ENV === 'production',
 });
 
-export const listener = manager;
-
 process.env.NODE_ENV === 'development' &&
   console.info('[plugin] Event listener has been initialized');

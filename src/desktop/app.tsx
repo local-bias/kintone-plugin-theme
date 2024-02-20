@@ -1,14 +1,13 @@
-import React, { ChangeEventHandler, FCX } from 'react';
+import React, { ChangeEventHandler, FC } from 'react';
 import { CircularProgress, MenuItem, TextField } from '@mui/material';
-import { kintoneClient } from '@/common/kintone-api';
-import { getApp } from '@lb-ribbit/kintone-xapp';
 import styled from '@emotion/styled';
+import { getAppId } from '@lb-ribbit/kintone-xapp';
+import { getAppSettings, kintoneAPI } from '@konomi-app/kintone-utilities';
+import { GUEST_SPACE_ID } from '@/lib/global';
 
-type AppSettings = Awaited<ReturnType<typeof kintoneClient.app.getAppSettings>>;
+type Props = { initSettings: kintoneAPI.AppSettings; className?: string };
 
-type Props = { initSettings: AppSettings };
-
-type Theme = AppSettings['theme'];
+type Theme = kintoneAPI.AppSettings['theme'];
 
 const THEMES = [
   ['WHITE', 'gaia-argoui-app-theme-white', 'ホワイト'],
@@ -17,7 +16,7 @@ const THEMES = [
   ['GREEN', 'gaia-argoui-app-theme-green', 'グリーン'],
   ['YELLOW', 'gaia-argoui-app-theme-yellow', 'イエロー'],
   ['BLACK', 'gaia-argoui-app-theme-black', 'ブラック'],
-];
+] satisfies [Theme, string, string][];
 
 const TARGET_SELECTOR = '.container-gaia';
 
@@ -32,9 +31,7 @@ function getThemeClassName(src: Theme) {
   return '';
 }
 
-const Component: FCX<Props> = ({ className, initSettings }) => {
-  const app = getApp()!;
-
+const Component: FC<Props> = ({ className, initSettings }) => {
   const [loading, setLoading] = React.useState(false);
   const [theme, setTheme] = React.useState(initSettings.theme || THEMES[0][0]);
   const timer = React.useRef();
@@ -54,14 +51,18 @@ const Component: FCX<Props> = ({ className, initSettings }) => {
     setLoading(true);
     setTheme(selectedTheme);
 
-    const origin = await kintone.api(kintone.api.url('/k/v1/preview/app/settings', true), 'GET', {
-      app: app.getId(),
+    const app = getAppId()!;
+
+    const origin = await getAppSettings({
+      app,
+      preview: true,
+      guestSpaceId: GUEST_SPACE_ID,
     });
 
     const originClass = getThemeClassName(origin.theme);
 
     const response = await kintone.api(kintone.api.url('/k/v1/preview/app/settings', true), 'PUT', {
-      app: app.getId(),
+      app,
       theme: event.target.value,
     });
 
@@ -77,7 +78,7 @@ const Component: FCX<Props> = ({ className, initSettings }) => {
 
     // 変更をアプリ設定に適用
     await kintone.api(kintone.api.url('/k/v1/preview/app/deploy', true), 'POST', {
-      apps: [{ app: app.getId(), revision: response.revision }],
+      apps: [{ app, revision: response.revision }],
     });
 
     // 設定変更の完了には時間がかかる場合があるので、一定間隔で確認します
@@ -89,7 +90,7 @@ const Component: FCX<Props> = ({ className, initSettings }) => {
         kintone.api.url('/k/v1/preview/app/deploy', true),
         'GET',
         {
-          apps: [app.getId()],
+          apps: [app],
         }
       );
 
@@ -111,7 +112,9 @@ const Component: FCX<Props> = ({ className, initSettings }) => {
         className='select'
       >
         {THEMES.map((theme) => (
-          <MenuItem value={theme[0]}>{theme[2]}</MenuItem>
+          <MenuItem key={theme[0]} value={theme[0]}>
+            {theme[2]}
+          </MenuItem>
         ))}
       </TextField>
       {loading && <CircularProgress size={24} className='button-progress' />}

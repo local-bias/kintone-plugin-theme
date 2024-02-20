@@ -1,10 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { kintoneClient } from '@/common/kintone-api';
 import { getAppId, getHeaderSpace } from '@lb-ribbit/kintone-xapp';
-
+import { getAppSettings } from '@konomi-app/kintone-utilities';
 import App from './app';
-import { manager } from '@/common/listener';
+import { manager } from '@/lib/event-manager';
 
 const ROOT_ID = 'ribbit-kintone-plugin-theme-root';
 
@@ -23,10 +22,11 @@ manager.add(['app.record.index.show'], async (event) => {
   rootElement.id = ROOT_ID;
   rootElement.style.display = 'inline-flex';
   rootElement.style.padding = '0 8px';
+  headerSpace.append(rootElement);
 
   const root = createRoot(rootElement);
 
-  const response = await kintoneClient.app.getAppSettings({ app: getAppId()! });
+  const response = await getAppSettings({ app: getAppId()! });
 
   root.render(<App initSettings={response} />);
 
