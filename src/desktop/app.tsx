@@ -16,7 +16,7 @@ const THEMES = [
   ['GREEN', 'gaia-argoui-app-theme-green', 'グリーン'],
   ['YELLOW', 'gaia-argoui-app-theme-yellow', 'イエロー'],
   ['BLACK', 'gaia-argoui-app-theme-black', 'ブラック'],
-] satisfies [Theme, string, string][];
+] as const satisfies [Theme, string, string][];
 
 const TARGET_SELECTOR = '.container-gaia';
 

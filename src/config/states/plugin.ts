@@ -36,7 +36,7 @@ const conditionPropertyState = selectorFamily<
     ({ get }) => {
       const conditionIndex = get(tabIndexState);
       const storage = get(storageState);
-      return storage.conditions[conditionIndex][key];
+      return storage.conditions[conditionIndex]![key];
     },
   set:
     (key) =>
