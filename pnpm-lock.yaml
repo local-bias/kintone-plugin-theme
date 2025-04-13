@@ -66,6 +66,9 @@ importers:
       '@konomi-app/k2':
         specifier: ^1.5.0
         version: 1.8.2(jiti@1.21.7)(typescript@5.8.3)(yaml@2.7.1)
+      '@konomi-app/prettier-config':
+        specifier: ^1.1.2
+        version: 1.1.2
       '@types/luxon':
         specifier: 3.4.2
         version: 3.4.2
@@ -682,6 +685,9 @@ packages:
 
   '@konomi-app/kintone-utilities@5.13.0':
     resolution: {integrity: sha512-OBFIt+2iFAE0kDc2qgXvHQAO6XhGm3LFDWqljPjewVVD0tAh5omUqWOKfN78csFp9UENXUZZHDG6VBZAnYwEcA==}
+
+  '@konomi-app/prettier-config@1.1.2':
+    resolution: {integrity: sha512-iVLA2EsavD2QU2+z6VNHh1/3R8UgqP8e7tP1EiDlk8SL51kpV3z0x2+p4oLInMME7cvLpalB03ZKIrE12R8HNg==}
 
   '@konomi-app/ui-react@1.1.1':
     resolution: {integrity: sha512-Ic4sCC/4NejXh0U6L4IMqHNA4+uueSyB8Ur7Qc3iE3f3qx9ELUF5G78JcysbF51ezMml7OwojtLUVWAonpeOIg==}
@@ -5099,6 +5105,8 @@ snapshots:
       zod: 3.24.2
     transitivePeerDependencies:
       - supports-color
+
+  '@konomi-app/prettier-config@1.1.2': {}
 
   '@konomi-app/ui-react@1.1.1(@types/react@18.3.5)':
     dependencies:
